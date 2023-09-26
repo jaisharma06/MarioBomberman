@@ -25,12 +25,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//Methods
+	//Members
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	class USpringArmComponent* SpringArm;
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	class UCameraComponent* Camera;
 
-	//Members
+	//Methods
+	void MoveForward(float Value);
+	void MoveRight(float Value);
 };
